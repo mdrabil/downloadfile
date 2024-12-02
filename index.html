@@ -1,36 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto PDF Download</title>
 </head>
+<style>
+  h1{
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  }
+</style>
 <body>
-     <h1>Welcome to My Website</h1>
+  <h1>Welcome to My Website</h1>
   <p>Your PDF file will be downloaded automatically.</p>
-
+  
   <script>
     // PDF File ka URL
-    const pdfUrl = 'city.png'; // yaha apni PDF file ka path dena hai
-
+    const pdfUrl = '_1686730898.pdf'; // yaha apni PDF file ka path dena hai
+    
     // PDF download karne ka function
     const downloadPDF = () => {
       const link = document.createElement('a');
       link.href = pdfUrl;
-      link.download = 'city.png'; // File ka naam
+      link.download = '_1686730898.pdf'; // File ka naam
       link.click();
     };
     
     // Page load hone par PDF download ho
     window.onload = downloadPDF;
-</script>
+  </script>
 </body>
 </html>
 
 
-
 <!--
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +58,7 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
     display: flex;
-      justify-content: center;
+    justify-content: center;
       align-items: center;
       z-index: 1000;
     }
@@ -70,7 +77,7 @@
       margin-bottom: 20px;
       font-size: 18px;
     }
-
+    
     .popup button {
       margin: 10px;
       padding: 10px 20px;
@@ -79,23 +86,23 @@
       cursor: pointer;
       font-size: 16px;
     }
-
+    
     .btn-download {
       background-color:green;
       color: white;
     }
-
+    
     .btn-cancel {
       background-color: gray;
       color: white;
     }
-
-
+    
+    
   </style>
 </head>
 <body>
+  
 
-  <!-- Overlay -->
   <div id="overlay" class="overlay">
     <div class="popup">
       <h2>Do you want to download the file?</h2>
@@ -103,22 +110,22 @@
       <button class="btn-cancel" id="cancelBtn">Cancel</button>
     </div>
   </div>
-
+  
   <script>
     // Get elements
     const openPopupBtn = document.getElementById('openPopup');
     const overlay = document.getElementById('overlay');
     const downloadBtn = document.getElementById('downloadBtn');
     const cancelBtn = document.getElementById('cancelBtn');
-
+    
     // Open popup
-
-
+    
+    
     // Close popup on Cancel
     cancelBtn.addEventListener('click', () => {
       overlay.classList.remove('active');
     });
-
+    
     // Download file
     downloadBtn.addEventListener('click', () => {
       // Trigger download
@@ -126,11 +133,12 @@
       link.href = 'city.png'; // Change to your file URL
       link.download = 'city.png';
       link.click();
-
+      
       // Close popup
       overlay.classList.remove('active');
     });
-  </script>
+    </script>
 </body>
 </html>
+
 -->
